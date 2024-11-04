@@ -1,0 +1,32 @@
+@api = http://localhost:3000/products
+
+### get all products
+GET {{api}}
+
+### create a product
+POST {{api}}
+Content-Type: application/json
+
+{
+    "title": "PS5",
+    "price": 200,
+    "image": "https://images-cdn.ubuy.com.sa/64d60c7c3959e70dff1acfd0-sony-playstation-5-video-game-console.jpg",
+    "description": "PlayStation 5",
+    "quantity": 10
+}
+
+### get a single product by id
+GET {{api}}/614668fa6a148afa452187c2
+
+### update a product by id
+PUT {{api}}/614668fa6a148afa452187c2
+Content-Type: application/json
+
+{
+    "title": "PS5 Slim",
+    "description": "PlayStation 5 Slim",
+    "price": "150"
+}
+
+### delete a product by id
+DELETE {{api}}/614668d7a08cdcea8b77ced6
